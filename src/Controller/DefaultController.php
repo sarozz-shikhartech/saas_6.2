@@ -23,6 +23,9 @@ class DefaultController extends AbstractController
         $this->entityManager = $entityManager;
     }
 
+    /*
+     * @todo Route modified as we need storeId and member badge id instead of member id
+     */
     #[Route("/store/{storeId}/member/{memberBadgeId}/catalog/{giftCatalogId}/gift/{giftId}/v2", name: 'member_gift_catalog_detail_v2', methods: ['GET'])]
     public function saasGiftCatalogDetailV2Api(Request $request): JsonResponse
     {
